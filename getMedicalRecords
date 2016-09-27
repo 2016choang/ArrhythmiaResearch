@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#for R in `wfdbcat vfdb/RECORDS`
+#do	
+#	gqrs -r vfdb/$R -s 1
+#	get_hrv -L vfdb/$R qrs >>test.txt
+#done 
+#
+#
+#for R in `wfdbcat cudb/RECORDS`
+#do	
+#	gqrs  -r cudb/$R -t 3:00
+#	get_hrv -L cudb/$R qrs >>test.txt
+#done 
+
+
+#for R in `wfdbcat nsrdb/RECORDS`
+#do 
+#	gqrs -r nsrdb/$R -f 35:00 -t 70:00 -s 1
+#	get_hrv -L nsrdb/$R qrs >>test.txt 
+#done 
+
+#for R in `wfdbcat svdb/RECORDS`
+#do 
+#	gqrs -r svdb/$R -s 1
+#	get_hrv -L svdb/$R qrs >>test.txt
+#done
+
+for R in `wfdbcat fantasia/RECORDS`
+do 
+	get_hrv -L fantasia/$R ecg 35:00 >>test.txt
+done
+
+
